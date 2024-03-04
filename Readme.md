@@ -46,7 +46,7 @@ The model that performed the best was a Voting Ensemble model, achieving an accu
 - tol = 0.0001
 - verbose = 0
 - warm_start = False
-- 
+
 Comparison of PipelinesWhen comparing both pipelines, AutoML appears to have the advantage due to:
 - Fewer steps required to find the best model (Simpler architecture)
 - Higher accuracy achieved

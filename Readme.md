@@ -22,11 +22,14 @@ The steps involved in implementing Hyperdrive include:
 - Executing the Hyperdrive
 - Retrieving the model with the parameters that resulted in the best model
 In the Hyperdrive configuration, two particularly beneficial parameters are included: RandomParameterSampling and BanditPolicy.
+
 **RandomParameterSampling** is a parameter sampler that randomly selects hyperparameter values from a broad range specified by the user for model training. This approach is superior to a grid sweep as it is less computationally expensive and time-consuming and can select parameters that yield high accuracy. The random sampler also supports early termination of low-performance runs, thus conserving computational resources. The parameters passed to the random sampler were:
 - C: 0.01,0.1,10,100
 - max_iter: 50,100,150,200
+
 **BanditPolicy** is an early termination policy that ends runs prematurely if they are not achieving the same performance as the best model. This also contributes to improving computational efficiency and saving time as it automatically terminates models with poor performance.
 The best model had parameters of C = 10 and max_iter = 50, and achieved an accuracy of 91.44%.
+
 ## Implementation of AutoML
 The following steps were executed to implement AutoML:
 - The banking dataset was imported using Azure TabularDataset Factory
